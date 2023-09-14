@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Data</title>
+</head>
+<body>
+    <h1>Air Quality Data</h1>
+    <form method="POST">
+        <label for="city_name">Enter City Name:</label>
+        <input type="text" name="city_name" id="city_name">
+        <button type="submit">Get Air Quality Data</button>
+    </form>
+    {% if city_name %}
+    <p>City Name: {{ city_name }}</p>
+    <p>Longitude: {{ lon }}</p>
+    <p>Latitude: {{ lat }}</p>
+    <p>Air Quality Index (AQI): {{ aqi_pos }} {{ aqi }} </p>
+    <p>Carbon Monoxide (CO): {{ co }}</p>
+    {% endif %}
+</body>
+</html>
